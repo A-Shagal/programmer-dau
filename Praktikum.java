@@ -5,16 +5,16 @@ public class Praktikum {
         System.out.println("Введите год");
         int year = inputYear.nextInt();
         boolean a = LeapYearCalculator.isLeapYear(year);
-        if(year <= 0 || year >= 10000){
+        if(year <= 0){
             System.out.println("Ошибка, некорректный ввод");
         } else if (a) {
             System.out.println("12.09."+ year + ". Високосный год");
-        } else System.out.println("13.09." + year + ".200 Обычный год");
+        } else System.out.println("13.09." + year + ". Обычный год");
     }
 }
 class LeapYearCalculator {
     public static boolean isLeapYear(int year){
-        if(year <= 0 || year >= 10000 ){
+        if(year <= 0){
             return false;
         } else if((year % 400 == 0 )){
             return true;
